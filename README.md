@@ -1,6 +1,8 @@
 # 🌱 AgriTunisie
 ### An AI-Driven Agriculture 4.0 Platform
-
+<p align="center">
+  <img src="assets/banner.png" alt="AgriTunisie — Agriculture 4.0" width="100%">
+</p>
 **AgriTunisie** is an academic engineering project exploring the integration of Artificial Intelligence (AI), Internet of Things (IoT), and modern software technologies to address agricultural challenges.
 
 The platform aims to support plant health monitoring, intelligent irrigation, and data-driven agricultural decision-making.
