@@ -1,2 +1,9 @@
-# AgriTunisie-Portfolio
-An AI-powered Agriculture 4.0 platform integrating Computer Vision, Machine Learning, IoT and intelligent agricultural assistance.
+<p align="center">
+  <img src="assets/banner.png" width="100%" alt="AgriTunisie Banner">
+</p>
+
+<h1 align="center">🌱 AgriTunisie</h1>
+
+<p align="center">
+  <strong>Bringing Intelligence to Agriculture</strong>
+</p>
