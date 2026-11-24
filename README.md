@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner1.png" width="100%" alt="AgriTunisie Banner">
+  <img src="assets/banner.jpg" width="100%" alt="AgriTunisie Banner">
 </p>
 
 <h1 align="center">🌱 AgriTunisie</h1>
