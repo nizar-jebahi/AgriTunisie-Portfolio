@@ -3,51 +3,59 @@
 
 ```mermaid
 flowchart TB
-    U["Farmer / User"]
 
-    subgraph FRONTEND["Frontend Layer"]
-        A["Angular + Ionic"]
-        B["Agricultural Dashboard"]
+    USER(["Farmer / User"])
+
+    subgraph FRONTEND["1. PRESENTATION LAYER"]
+        direction LR
+        APP["Angular + Ionic"]
+        DASH["Agricultural Dashboard"]
+        APP --> DASH
     end
 
-    subgraph BACKEND["Backend Layer"]
-        C["FastAPI"]
-        D["API Services"]
+    subgraph BACKEND["2. BACKEND LAYER"]
+        API["FastAPI Backend"]
+        SERVICES["Application Services"]
+        API --> SERVICES
     end
 
-    subgraph AI["Artificial Intelligence Layer"]
-        E["YOLOv8 - Disease Detection"]
-        F["EfficientNetB0 - Classification"]
-        G["XGBoost - Irrigation Prediction"]
-        H["RAG - Agricultural Assistant"]
+    subgraph AI["3. ARTIFICIAL INTELLIGENCE"]
+        direction LR
+        YOLO["YOLOv8<br/>Disease Detection"]
+        EFF["EfficientNetB0<br/>Image Classification"]
+        XGB["XGBoost<br/>Irrigation Prediction"]
+        RAG["RAG Chatbot<br/>Agricultural Assistance"]
     end
 
-    subgraph IOT["IoT Layer"]
-        I["Raspberry Pi"]
-        J["DHT11 / BH1750"]
-        K["Soil Moisture Sensor"]
+    subgraph IOT["4. IoT MONITORING"]
+        direction LR
+        PI["Raspberry Pi 4B"]
+        DHT["DHT11"]
+        BH["BH1750"]
+        SOIL["Soil Moisture Sensor"]
+        DHT --> PI
+        BH --> PI
+        SOIL --> PI
     end
 
-    L[("MongoDB")]
+    subgraph DATA["5. DATA STORAGE"]
+        DB[("MongoDB")]
+    end
 
-    U --> A
-    A --> B
-    B <--> C
-    C --> D
+    USER --> APP
+    DASH <-->|HTTP Requests / Responses| API
 
-    D --> E
-    D --> F
-    D --> G
-    D --> H
+    SERVICES --> YOLO
+    SERVICES --> EFF
+    SERVICES --> XGB
+    SERVICES --> RAG
 
-    I --> J
-    I --> K
-    I --> C
+    PI -->|Sensor Data| API
+    SERVICES <--> DB
 
-    D <--> L
-
-    style FRONTEND fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
-    style BACKEND fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
-    style AI fill:#f3e5f5,stroke:#7b1fa2,color:#4a148c
-    style IOT fill:#fff3e0,stroke:#ef6c00,color:#e65100
+    style FRONTEND fill:#E8F5E9,stroke:#388E3C,color:#1B5E20
+    style BACKEND fill:#E3F2FD,stroke:#1976D2,color:#0D47A1
+    style AI fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C
+    style IOT fill:#FFF3E0,stroke:#EF6C00,color:#E65100
+    style DATA fill:#E0F2F1,stroke:#00897B,color:#004D40
 ```
