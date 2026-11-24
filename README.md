@@ -1,7 +1,6 @@
-<p align="center">
-  # 🌱 AgriTunisie
-  ### An AI-Driven Agriculture 4.0 Platform
-</p>
+
+          # 🌱 AgriTunisie
+          ### An AI-Driven Agriculture 4.0 Platform
 <p align="center">
   <img src="assets/AgriTunisie Agriculture 4.0 Banner.png" alt="AgriTunisie — Agriculture 4.0" width="100%">
 </p>
